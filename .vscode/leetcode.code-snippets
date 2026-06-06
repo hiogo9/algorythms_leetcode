@@ -4,7 +4,7 @@
         "prefix": "lctest",
         "body": [
             "import pytest",
-            "from .solution import Solution",
+            "from solution import Solution",
             "",
             "@pytest.mark.parametrize(\"args, expected\", [",
             "    (($1), $2),",
