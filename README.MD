@@ -29,7 +29,13 @@ python3 -m venv .venv
 
 ## Workflow
 
-### 1. Open a problem
+### 1. Activate the virtual environment
+
+```bash
+source .venv/bin/activate
+```
+
+### 2. Open a problem
 
 Sidebar → LeetCode → select a problem. The extension creates `problems/{id}_{name}/solution.py`.
 
