@@ -85,5 +85,5 @@ Ctrl+Shift+P → **LeetCode: Submit** → if Accepted:
 
 ```bash
 git add problems/{name}
-git commit -m "feat: solved {number}"
+git commit -m "{number}"
 ```
