@@ -27,9 +27,13 @@ Each problem: `problems/{id}_{name}/solution.py` + `test_solution.py`.
 import pytest
 from solution import Solution
 
-@pytest.mark.parametrize("args, expected", [
-    (([2, 7, 11, 15], 9), [0, 1]),
-])
+
+@pytest.mark.parametrize(
+    "args, expected",
+    [
+        (([2, 7, 11, 15], 9), [0, 1]),
+    ],
+)
 def test_solution(args, expected):
     assert Solution().twoSum(*args) == expected
 ```

@@ -1,3 +1,4 @@
+import sys
 import builtins
 import collections
 from typing import List, Optional, Dict, Set, Tuple, Deque
@@ -94,3 +95,8 @@ class TreeNode:
 # Подавляем ошибку присваивания в builtins
 builtins.ListNode = ListNode  # type: ignore
 builtins.TreeNode = TreeNode  # type: ignore
+
+
+def pytest_collect_file(parent, file_path):
+    if file_path.name == "test_solution.py":
+        sys.path.insert(0, str(file_path.parent))
