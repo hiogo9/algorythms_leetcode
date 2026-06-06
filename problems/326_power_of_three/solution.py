@@ -5,6 +5,7 @@
 #
 
 # @lc code=start
+from typing import *
 class Solution:
     def isPowerOfThree(self, n: int) -> bool:
         while n > 1:
