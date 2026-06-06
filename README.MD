@@ -73,8 +73,17 @@ Or from the terminal:
 
 Set a breakpoint in `solution.py`, open `test_solution.py`, press **F5**.
 
-### 5. Submit and commit
+### 5. Alternative solutions
+
+Create `solution2.py`, `solution3.py` etc. next to `solution.py`. Run **Generate Test File** again — the script copies test cases from the existing test and adds a `test_solution2` block automatically.
+
+To submit an alternative solution, open it and run **Tasks: Swap with solution.py** — the files swap and classes are renamed automatically (`Solution2` ↔ `Solution`). Run the task again to swap back.
+
+### 6. Submit and commit
 
 Ctrl+Shift+P → **LeetCode: Submit** → if Accepted:
 
-
+```bash
+git add problems/{name}
+git commit -m "feat: solved {number}"
+```
