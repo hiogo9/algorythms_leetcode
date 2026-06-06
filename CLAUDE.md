@@ -5,9 +5,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-make setup          # first-time setup
-make test           # run all tests
-.venv/bin/pytest problems/1_two_sum/ -v  # single problem
+.venv/bin/pytest problems/ -v               # run all tests
+.venv/bin/pytest problems/1_two_sum/ -v     # single problem
 ```
 
 ## Structure
