@@ -7,6 +7,7 @@ from solution import Solution
     [
         ((27,), True),
         ((0,), False),
+        ((45,), False),
     ],
 )
 def test_solution(args, expected):

@@ -1,2 +1,6 @@
 [lint]
+select = ["E", "F", "C90"]
 ignore = ["F403", "F405"]
+
+[lint.mccabe]
+max-complexity = 10
