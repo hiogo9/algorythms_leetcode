@@ -97,6 +97,19 @@ builtins.ListNode = ListNode  # type: ignore
 builtins.TreeNode = TreeNode  # type: ignore
 
 
+from _pytest.python import Module
+
+
+class SolutionModule(Module):
+    def collect(self):
+        path_str = str(self.path.parent)
+        sys.modules.pop("solution", None)
+        if path_str in sys.path:
+            sys.path.remove(path_str)
+        sys.path.insert(0, path_str)
+        return super().collect()
+
+
 def pytest_collect_file(parent, file_path):
     if file_path.name == "test_solution.py":
-        sys.path.insert(0, str(file_path.parent))
+        return SolutionModule.from_parent(parent, path=file_path)
