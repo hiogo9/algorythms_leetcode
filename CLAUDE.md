@@ -38,6 +38,13 @@ def test_solution(args, expected):
     assert Solution().twoSum(*args) == expected
 ```
 
+## Alternative solutions
+
+Additional solutions go in `solution2.py`, `solution3.py` etc. with classes named `Solution2`, `Solution3`.
+
+- Run **Generate Test File** task to add a new test block with copied test cases.
+- Run **Swap with solution.py** task (with `solutionN.py` active) to swap files for LeetCode submission — classes are renamed automatically.
+
 ## Commit convention
 
 ```
