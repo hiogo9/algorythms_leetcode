@@ -1,0 +1,17 @@
+{
+    "LeetCode Pytest": {
+        "scope": "python",
+        "prefix": "lctest",
+        "body": [
+            "import pytest",
+            "from .solution import Solution",
+            "",
+            "@pytest.mark.parametrize(\"args, expected\", [",
+            "    (($1), $2),",
+            "])",
+            "def test_solution(args, expected):",
+            "    assert Solution().$3(*args) == expected"
+        ],
+        "description": "Generate Pytest block for LeetCode"
+    }
+}

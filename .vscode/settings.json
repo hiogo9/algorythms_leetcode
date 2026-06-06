@@ -1,0 +1,9 @@
+{
+    "leetcode.workspaceFolder": "${workspaceFolder}",
+    "leetcode.filePath": {
+        "python3": {
+            "folder": "problems",
+            "filename": "${id}_${snakeCaseName}/solution.py"
+        }
+    }
+}
