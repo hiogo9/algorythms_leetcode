@@ -9,8 +9,8 @@ python3 -m venv .venv
 
 ### VS Code extensions
 
-1. Extensions (Ctrl+Shift+X) → install **LeetCode** (by LeetCode).
-2. Ctrl+Shift+P → **LeetCode: Sign In** → LeetCode.com → Cookie.
+1. Extensions (Ctrl+Shift+X) → install **LeetCode** .
+2. Ctrl+Shift+P → **LeetCode: Sign In** → LeetCode.com.
 3. Ctrl+Shift+P → **Open User Settings (JSON)** → add:
 
 ```json
