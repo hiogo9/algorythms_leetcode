@@ -60,7 +60,7 @@ def test_solution(args, expected):
 
 ### 3. Run tests
 
-Testing panel in the sidebar (beaker icon) → click ▶ next to a test, file, or folder.
+Testing panel in the sidebar (beaker icon) → click Run next to a test, file, or folder.
 
 Or from the terminal:
 

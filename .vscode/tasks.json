@@ -12,6 +12,18 @@
                 "reveal": "silent",
                 "close": true
             }
+        },
+        {
+            "label": "Swap with solution.py",
+            "type": "shell",
+            "command": "python3 ${workspaceFolder}/scripts/swap_solution.py ${fileBasename}",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "presentation": {
+                "reveal": "silent",
+                "close": true
+            }
         }
     ]
 }
