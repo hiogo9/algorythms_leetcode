@@ -48,7 +48,7 @@ def extract_cases(test_path: Path) -> str:
             if depth == 0:
                 tail = "," if content[i + 1 : i + 2] == "," else ""
                 return content[start : i + 1] + tail
-    return "[\n        (( ,), ),\n    ],"
+    return "[\n        ((), ),\n    ],"
 
 
 def test_block(sol_path: Path, method: str, cases: str) -> str:
