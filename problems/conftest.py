@@ -115,6 +115,6 @@ class SolutionModule(Module):
         return super().collect()
 
 
-def pytest_collect_file(parent, file_path):
-    if file_path.name == "test_solution.py":
-        return SolutionModule.from_parent(parent, path=file_path)
+def pytest_pycollect_makemodule(module_path, parent):
+    if module_path.name == "test_solution.py":
+        return SolutionModule.from_parent(parent, path=module_path)
