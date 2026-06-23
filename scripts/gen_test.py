@@ -37,7 +37,7 @@ def extract_cases(test_path: Path) -> str:
     content = test_path.read_text()
     m = re.search(r'@pytest\.mark\.parametrize\(\s*"args, expected",\s*', content)
     if not m:
-        return "[\n        ((), ),\n    ],"
+        return "[\n        ((, ), ),\n    ],"
     start = content.index("[", m.end())
     depth = 0
     for i, ch in enumerate(content[start:], start):
@@ -48,7 +48,7 @@ def extract_cases(test_path: Path) -> str:
             if depth == 0:
                 tail = "," if content[i + 1 : i + 2] == "," else ""
                 return content[start : i + 1] + tail
-    return "[\n        ((), ),\n    ],"
+    return "[\n        ((, ), ),\n    ],"
 
 
 def test_block(sol_path: Path, method: str, cases: str) -> str:
@@ -77,7 +77,7 @@ test_file = Path("test_solution.py")
 
 if not test_file.exists():
     imports = "\n".join(f"from {s.stem} import {class_name(s)}" for s in solutions)
-    cases = "[\n        ((), ),\n    ],"
+    cases = "[\n        ((, ), ),\n    ],"
     blocks = "".join(test_block(s, method, cases) for s in solutions)
     test_file.write_text(f"import pytest\n{imports}\n{blocks}")
     print(f"Created test_solution.py (method: {method})")
